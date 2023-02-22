@@ -1,0 +1,1 @@
+SELECT users.id AS user_id, users.first_name, users.last_name, books.title AS book_title FROM users JOIN books
