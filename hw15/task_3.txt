@@ -1,8 +1,0 @@
-SELECT users.id, users.first_name, users.last_name, books.title
-FROM books JOIN purchase, users
-ON purchase.book_id = books.id AND purchase.user_id = users.id
-<<<<<<< HEAD
-ORDER BY users.id
-=======
-ORDER BY users.id
->>>>>>> 26c712651ebf4d6034e30d7687471648322522e3
