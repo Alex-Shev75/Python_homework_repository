@@ -1,1 +1,4 @@
-SELECT users.id AS user_id, users.first_name, users.last_name, books.title AS book_title FROM users JOIN books
+SELECT users.id, users.first_name, users.last_name, books.title
+FROM books JOIN purchase, users
+ON purchase.book_id = books.id AND purchase.user_id = users.id
+ORDER BY users.id
