@@ -1,0 +1,5 @@
+SELECT books.author, count(purchase.book_id) AS 'books sold',
+CASE WHEN count(purchase.book_id) = 0 THEN 0 ELSE sum(books.price) END AS 'sales amount'
+FROM books 
+LEFT JOIN purchase ON purchase.book_id = books.id
+GROUP BY books.author
